@@ -1,0 +1,23 @@
+.bg1 { background-color: #000 !important; }
+.bg2 { background-color: #444 !important; }
+.bg3 { background-color: #888 !important; }
+.bg4 { background-color: #CCC !important; }
+.bg5 { background-color: #FFF !important; }
+
+.tx1 { color: #000 !important; }
+.tx2 { color: #444 !important; }
+.tx3 { color: #888 !important; }
+.tx4 { color: white !important; }
+.tx5 { color: #FFF !important; }
+.title {
+ color: #04ACEC;
+}
+.submitted a {
+ color: #04ACEC;
+}
+.content h3{
+ color:#3d3c3c;
+}
+/*ul.primary li a{
+ color: #04ACEC;
+}*/

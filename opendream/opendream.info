@@ -1,0 +1,19 @@
+; $Id$
+name = Opendream
+description = Opendream theme look alike.
+package = Openweb
+version = VERSION
+core = 7.x
+engine = phptemplate
+
+stylesheets[screen][] = css/screen.css
+stylesheets[print][] = css/print.css
+stylesheets[all][] = css/layout.css
+stylesheets[all][] = css/color.css
+stylesheets[all][] = css/custom.css
+
+regions[header] = Header
+regions[highlight] = Highlighted
+regions[content] = Content
+regions[sidebar_first] = Sidebar first
+regions[footer] = Footer

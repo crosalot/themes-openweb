@@ -1,0 +1,486 @@
+/* $Id */
+
+/**
+ * @file
+ * Stark layout method
+ *
+ * To avoid obscuring CSS added to the page by Drupal or a contrib module, the
+ * Stark theme itself has no styling, except just enough CSS to arrange the page
+ * in a traditional "Header, sidebars, content, and footer" layout.
+ *
+ * This layout method works reasonably well, but shouldn't be used on a
+ * production site because it can break. For example, if an over-large image
+ * (one that is wider than 20% of the viewport) is in the left sidebar, the
+ * image will overlap with the #content to the right. The exception to this
+ * is IE6 which will just hide the navigation block completely in these
+ * instances due to a positioning bug.
+ */
+
+#content,
+#sidebar-first,
+#sidebar-second {
+  float: left;
+  display: inline;
+  position: relative;
+}
+
+#content {
+  width: 960px;
+}
+body.sidebar-second #content {
+  width: 600px;
+  left: 260px; /* LTR */
+}
+body.sidebar-first #content {
+  width: 600px;
+}
+body.two-sidebars #content {
+  width: 600px;
+  left: 260px;
+}
+
+#sidebar-second {
+  width: 260px;
+  left: -600px; /* LTR */
+}
+
+body.two-sidebars #sidebar-second {
+  left: -600px; /* LTR */
+}
+
+#sidebar-first {
+  float: right; /* LTR */
+  width: 260px;
+}
+
+.section {
+
+}
+
+#page-wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+ul.links li {
+  padding: 0;
+}
+
+.block ul {
+  padding: 0;
+}
+
+.sidebar .block ul {
+  padding:0 0 0.25em 1em;
+}
+
+
+/**********************************************************
+ *                    Body
+ **********************************************************/
+body {
+  font-family: Arial, Helvertica, Verdana, Geneva, "DejaVu Sans", sans-serif;
+  color: #666;
+}
+
+/**********************************************************
+ *                 HTML Elements
+ **********************************************************/
+
+h1, h2, h3, h4, h5, h6 {
+  color: #c8a851;
+}
+
+h1 { font-size: 2.0em; }
+h2 { font-size: 1.7em;}
+h3 { font-size: 1.5em;}
+h4 { font-size: 1.2em;}
+h5 { font-size: 1.1em;}
+h6 { font-size: 1.0em;}
+
+p {}
+
+strong {}
+em, dfn {}
+dfn {}
+
+sup, sub {}
+
+del {}
+ins {}
+
+blockquote {}
+cite {}
+q {}
+
+address {}
+
+ul {}
+ol {}
+li {}
+
+dl {}
+dd {}
+dt {}
+
+
+abbr {}
+acronym {}
+
+pre, code, tt {}
+p code {}
+samp {}
+kbd {}
+var {}
+
+/**********************************************************
+ *                 Global Link Styles
+ **********************************************************/
+a {
+  text-decoration: none;
+  color: #126c5a;
+}
+
+a:link    {}
+a:visited {}
+a:hover   {
+  color: #999;
+  text-decoration: underline;
+}
+a:active  {
+
+}
+a.active  {
+
+}
+
+/* Set global a:active and a:focus styles. */
+a:active,
+a:focus {
+  color: #C00000;
+  border: 0;
+}
+
+/* Drupal sets this to black. */
+li a.active {
+}
+
+/* Remove borders on linked images. */
+a img {
+  border: none;
+}
+
+/**********************************************************
+ *                    Secondary menu
+ **********************************************************/
+
+#secondary-menu {
+  text-align:right;
+}
+
+
+/**********************************************************
+ *                     Navigation
+ **********************************************************/
+
+#block-system-main-menu {
+  background: #1F836F;
+  height: 42px;
+}
+
+#block-system-main-menu a {
+  color: #fff;
+}
+
+#block-system-main-menu ul li a {
+  line-height: 42px;
+  height: 42px;
+  display: block;
+  float: left;
+  padding: 0 15px;
+  font-size: 1em;
+  font-size: 1.5em;
+}
+
+#block-system-main-menu ul li a:hover,
+#block-system-main-menu ul li a.active {
+  background: #C4EB17;
+  color: #fff;
+  text-decoration: none;
+}
+
+#block-system-main-menu ul.menu li {
+  display: block;
+  padding: 0;
+  list-style: none;
+}
+
+
+
+
+
+
+/* Breadcrumb */
+#breadcrumb {
+  clear: both;
+  font-size: 12px;
+  padding: 10px 0;
+}
+
+
+/* block */
+
+.block h2 {
+  font-weight: normal;
+  color: #333;
+  padding: 0;
+  margin: 1em 0 0.5em;
+}
+
+
+
+.submitted {
+  font-size: 0.8em;
+}
+
+.node .content {
+  padding: 0 0 20px;
+}
+
+.links {
+  font-size: 1em;
+}
+
+ul.links li {
+  padding: 0 0.8em 0 0;
+}
+
+.node h2 {
+  border-left: 32px solid #C4EB17;
+  padding-left: 10px;
+}
+
+.node h2 a:hover {
+  background: #1F836F;
+  color: #fff;
+  text-decoration: none;
+}
+
+body {
+  background-color: #DDDDDD;
+}
+
+#logo {
+  display: block;
+  float: left;
+  margin-left: 0px !important;
+}
+
+#logo-slogan {
+  background-color: transparent;
+}
+
+#logo-slogan-bg-img, #logo-slogan-bg-color {
+  display: none;
+}
+
+#site-slogan {
+  color: #EEE;
+}
+
+#block-oneclick_header-header {
+  float: left;
+  height: 86px;
+  overflow: hidden;
+}
+#block-oneclick_header-header > h2 {
+  display: none;
+}
+
+#block-search-form {
+  float: right;
+  height: 86px;
+  overflow: hidden;
+}
+
+#block-node_weight-banner {
+  -moz-transform: scale(1) rotate(-3deg) translate(0px, 0px) skew(0deg, 0deg);
+-webkit-transform: scale(1) rotate(-3deg) translate(0px, 0px) skew(0deg, 0deg);
+  float: left;
+  width: 100%;
+  margin-top: 5px;
+  clear: all;
+}
+#block-node_weight-banner > h2 {
+  display: none;
+}
+
+.node-weight-slide {
+  /* background-color: #013C4C ; */
+  background-color: #dcdcdc;
+  /*
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  */
+  padding: 0px;
+  -moz-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.7);
+}
+
+.node-weight-content-second-wrap {
+  position: relative;
+}
+
+.node-weight-content-second-wrap > h3{
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  height: 120px;
+  width: 100%;
+  margin: 0px;
+  padding: 5px;
+}
+
+#block-system-main-menu {
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+  -moz-box-shadow: 0px 2px 6px rgb(0,0,0,0.5);
+  -webkit-box-shadow: 0px 2px 6px rgb(0,0,0,0.5);
+  box-shadow: 0px 2px 6px rgb(0,0,0,0.5);
+}
+
+#block-system-main-menu {
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  -moz-border-radius-topleft: 8px;
+  -moz-border-radius-topright: 8px;
+  border-radius-topleft: 8px;
+  border-radius-topright: 8px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#04acec), to(#0186ba)) !important; /* for webkit browsers */
+  background: -moz-linear-gradient(top, #04acec, #0186ba) !important; /* for firefox 3.6+ */
+  border-bottom: 1px solid #BBB;
+  /*
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+  -o-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+  */
+}
+
+#block-system-main-menu ul.menu li.first a {
+  -webkit-border-top-left-radius: 8px;
+  -moz-border-radius-topleft: 8px;
+  border-radius-topleft: 8px;
+}
+
+#block-system-main-menu ul.menu li.active-trail a.active {
+  border-right: 1px solid #9B5;
+}
+
+body {
+  background-color: #000;
+  background-image: url(warty-final-ubuntu.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+}
+
+#main-wrapper {
+  /*
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  border: 1px solid rgba(0,0,0,0.5);
+  */
+  padding: 10px 20px;
+  border-radius: 10px 10px 2px 2px;
+  background: rgba(220,220,220,1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+  -o-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+}
+
+#node-weight-navi-banner {
+  display: none;
+}
+
+.node h2 , .node h2 a{
+  width: 920px;
+  font: normal 30px/1.2em "Myriad Pro",Myriad,Helvetica,Arial,sans-serif;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+  border-left: 0px;
+  padding-left: 0px;
+  color: #222;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+#page-title {
+  font-size: 3em;
+  margin: 5px 0px 10px 0px;
+}
+
+.node-teaser {
+  padding-bottom: 20px;
+  border-bottom: 5px dotted #666;
+}
+
+.submitted {
+  /* border-bottom: 1px solid #333; */
+}
+
+#content {
+  width: 940px;
+}
+
+#content .section > * {
+  width: 920px;
+}
+
+#content.has_sidebar .section > * {
+  width: 640px;
+}
+
+#sidebar-first .region {
+}
+
+div.messages {
+  margin: 0px;
+}
+
+#block-system-main > * {
+  width: 920px;
+}
+
+#content.has_sidebar #block-system-main > * {
+  width: 640px;
+}
+
+#block-system-main > h2 {
+  display: none;
+}
+
+.block {
+}
+
+.block ul, .block ul li {
+  padding-left: 0px;
+  margin-left: 0px;
+}
+.content .views-row {
+  float:left;
+}
+#block-views-movie_update-block_1 {
+  overflow:hidden;
+}
+#block-comment-recent {
+  float:left;
+  height:300px;
+  margin-right:50px
+}
+#block-blog-recent {
+  width:700px;
+}

@@ -1,0 +1,21 @@
+#content {
+  float: left;
+  margin-right: 0;
+  width: 950px;
+}
+
+body.sidebar-first #content {
+  float: left;
+  margin-right: 10px;
+  width: 710px;
+}
+
+#sidebar_first {
+  float: left;
+  margin-right: 0px;
+  width: 230px;
+}
+
+div.block {
+  margin-bottom: 20px;
+}

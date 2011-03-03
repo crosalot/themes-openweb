@@ -1,0 +1,285 @@
+/* $Id */
+
+/**
+ * @file
+ * Stark layout method
+ *
+ * To avoid obscuring CSS added to the page by Drupal or a contrib module, the
+ * Stark theme itself has no styling, except just enough CSS to arrange the page
+ * in a traditional "Header, sidebars, content, and footer" layout.
+ *
+ * This layout method works reasonably well, but shouldn't be used on a
+ * production site because it can break. For example, if an over-large image
+ * (one that is wider than 20% of the viewport) is in the left sidebar, the
+ * image will overlap with the #content to the right. The exception to this
+ * is IE6 which will just hide the navigation block completely in these
+ * instances due to a positioning bug.
+ */
+
+#content,
+#sidebar-first,
+#sidebar-second {
+  float: left;
+  display: inline;
+  position: relative;
+}
+
+#content {
+  width: 940px;
+  padding: 0px 10px 0 10px;
+}
+#content .content .field-name-body p {
+  font-size:16px;
+  line-height:24px;
+}
+#content .section #page-title {
+  display: none;
+}
+#sidebar-first .content .item-list li {
+  font-size:14px;
+  line-height:17px;
+  list-style:none outside none;
+}
+#sidebar-first .content .item-list li a {
+  border-bottom:1px solid #EFEFEF;
+  color:#333333;
+  display:block;
+  padding:10px 4px;
+  text-decoration:none;
+}
+#sidebar-first .content .item-list li.last a {
+  border-bottom: 0px none;
+}
+#sidebar-first li a:hover {
+  background:none repeat scroll 0 0 #EFEFEF;
+}
+#sidebar-first .item-list ul li {
+  margin-left: 0px;
+}
+
+#content .content .submitted {
+  font-size:13px;
+  letter-spacing:2px;
+  padding-bottom:30px;
+  text-transform:uppercase;
+}
+
+body {
+  background-color: #97BFBC;
+}
+body.sidebar-second #content {
+  width: 580px;
+  left: 260px; /* LTR */
+}
+body.sidebar-first #content {
+  width: 680px;
+}
+body.two-sidebars #content {
+  width: 420px;
+  left: 280px;
+}
+
+#sidebar-second {
+  width: 260px;
+  left: -600px; /* LTR */
+}
+
+body.two-sidebars #sidebar-second {
+  left: -600px; /* LTR */
+}
+
+#sidebar-first {
+  float: right; /* LTR */
+  width: 240px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.section {
+
+}
+
+#page-wrapper {
+  width: 100%;
+  background-color: #FFFFFF;
+  padding: 20px 0 30px 0;
+}
+
+#page {
+  width: 960px;
+  margin: 0 auto;
+}
+
+ul.links li {
+  padding: 0;
+}
+
+.block ul {
+  padding: 0;
+}
+
+.sidebar .block ul {
+  padding:0 0 0.25em 1em;
+}
+
+.block {
+  margin: 0 10px;
+}
+
+#content .block {
+  margin: 0;
+}
+
+#sidebar-first .block {
+  margin: 0;
+  padding: 10px;
+}
+
+/**********************************************************
+ *                    Body
+ **********************************************************/
+
+/**********************************************************
+ *                 HTML Elements
+ **********************************************************/
+/**********************************************************
+ *                 Global Link Styles
+ **********************************************************/
+/**********************************************************
+ *                    Secondary menu
+ **********************************************************/
+
+/**********************************************************
+ *                     Navigation
+ **********************************************************/
+ 
+
+
+
+
+
+/* Breadcrumb */
+#breadcrumb {
+  clear: both;
+  font-size: 12px;
+  padding: 10px 10px 0px 10px;
+}
+
+
+/* block */
+
+
+
+/* Header */
+#block-system-main-menu { 
+  min-height: 30px;
+}
+#block-system-main-menu li {
+  border-right: 1px solid #666;
+  color: #CCC;
+  display: inline;
+  margin: 0 20px 0 0;
+  padding: 0 20px 0 0;
+  text-transform: uppercase;
+  list-style: none;
+}
+#block-system-main h2 {
+  font-size:50px;
+  font-weight:normal;
+  letter-spacing:-1px;
+  line-height:45px;
+  margin:0;
+  padding:4px 0;
+}
+#block-system-main h2 a {
+  color:#111111;
+  display:block;
+  text-decoration:none;
+}
+#block-system-main-menu li a { 
+  color: #CCC;
+  font-size: 11px !important;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+#block-system-main-menu li a:hover { 
+  color: #999;
+}
+#block-system-main-menu li a.active { 
+  color: #334455;
+}
+#logo-slogan-bg-color{
+  background: none repeat scroll 0 0 transparent !important;
+}
+#header {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border-bottom: 1px dotted #CCCCCC;
+  border-top: 10px solid #B7D7D5;
+  height: auto;
+  margin-bottom: 0px;
+}
+#header .region-header {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+
+}
+#header .block {
+  margin: 0 10px;
+}
+#header #block-oneclick_header-header * {
+ margin: 0px;
+ padding: 0px;
+}
+#header #block-oneclick_header-header {
+ margin-top: 20px;
+}
+#block-system-main-menu {
+  width: 940px;
+/*  float: left;
+  background-color: transparent; */ 
+}
+#block-system-main-menu li.last {
+  border-right: 0px none;
+}
+#block-system-main-menu li {
+  float: left;
+  line-height: 13px
+}
+#block-system-main-menu .content {
+  float: right;
+}
+/* Highlight */
+#highlight .block-node-weight h2 {
+  display: none !important;
+}
+#highlight .node-weight-slide-cycle {
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+/* Sidebar first */
+#sidebar-first h2 {
+  margin: 0 0 8px;
+}
+
+/* Content */
+.node-weight-slide {
+  background: none repeat scroll 0 0 transparent !important;
+ }
+/* Footer */
+#footer-wrap{
+  color:#DAEBE9;
+  font-size:14px;
+  /*height:150px;*/
+  padding-top:10px;
+  padding-bottom: 10px;
+}
+#footer {
+  margin-left: auto;
+  margin-right: auto;
+  width: 940px;
+}
+.node-teaser {
+  margin-bottom: 20px;
+}
+

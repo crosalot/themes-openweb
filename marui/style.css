@@ -1,0 +1,271 @@
+/* $Id */
+
+/**
+ * @file
+ * Stark layout method
+ *
+ * To avoid obscuring CSS added to the page by Drupal or a contrib module, the
+ * Stark theme itself has no styling, except just enough CSS to arrange the page
+ * in a traditional "Header, sidebars, content, and footer" layout.
+ *
+ * This layout method works reasonably well, but shouldn't be used on a
+ * production site because it can break. For example, if an over-large image
+ * (one that is wider than 20% of the viewport) is in the left sidebar, the
+ * image will overlap with the #content to the right. The exception to this
+ * is IE6 which will just hide the navigation block completely in these
+ * instances due to a positioning bug.
+ */
+
+#content,
+#sidebar-first,
+#sidebar-second {
+  float: left;
+  display: inline;
+  position: relative;
+}
+
+#content {
+  width: 960px;
+}
+body.sidebar-second #content {
+  width: 600px;
+  left: 260px; /* LTR */
+}
+body.sidebar-first #content {
+  width: 600px;
+}
+body.two-sidebars #content {
+  width: 600px;
+  left: 260px;
+}
+
+#sidebar-second {
+  width: 260px;
+  left: -600px; /* LTR */
+}
+
+body.two-sidebars #sidebar-second {
+  left: -600px; /* LTR */
+}
+
+#sidebar-first {
+  float: right; /* LTR */
+  width: 260px;
+}
+
+.section {
+
+}
+
+#page-wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+ul.links li {
+  padding: 0;
+}
+
+.block ul {
+  padding: 0;
+}
+
+.sidebar .block ul {
+  padding:0 0 0.25em 1em;
+}
+
+
+/**********************************************************
+ *                    Body
+ **********************************************************/
+body {
+  font-family: Arial, Helvertica, Verdana, Geneva, "DejaVu Sans", sans-serif;
+  color: #666;
+}
+
+/**********************************************************
+ *                 HTML Elements
+ **********************************************************/
+
+h1, h2, h3, h4, h5, h6 {
+  color: #c8a851;
+}
+
+h1 { font-size: 2.0em; }
+h2 { font-size: 1.7em;}
+h3 { font-size: 1.5em;}
+h4 { font-size: 1.2em;}
+h5 { font-size: 1.1em;}
+h6 { font-size: 1.0em;}
+
+p {}
+
+strong {}
+em, dfn {}
+dfn {}
+
+sup, sub {}
+
+del {}
+ins {}
+
+blockquote {}
+cite {}
+q {}
+
+address {}
+
+ul {}
+ol {}
+li {}
+
+dl {}
+dd {}
+dt {}
+
+
+abbr {}
+acronym {}
+
+pre, code, tt {}
+p code {}
+samp {}
+kbd {}
+var {}
+
+/**********************************************************
+ *                 Global Link Styles
+ **********************************************************/
+a {
+  text-decoration: none;
+  color: #126c5a;
+}
+
+a:link    {}
+a:visited {}
+a:hover   {
+  color: #999;
+  text-decoration: underline;
+}
+a:active  {
+
+}
+a.active  {
+
+}
+
+/* Set global a:active and a:focus styles. */
+a:active,
+a:focus {
+  color: #C00000;
+  border: 0;
+}
+
+/* Drupal sets this to black. */
+li a.active {
+}
+
+/* Remove borders on linked images. */
+a img {
+  border: none;
+}
+
+/**********************************************************
+ *                    Secondary menu
+ **********************************************************/
+
+#secondary-menu {
+  text-align:right;
+}
+
+
+/**********************************************************
+ *                     Navigation
+ **********************************************************/
+ 
+#block-system-main-menu {
+  background: #1F836F;
+  height: 42px;
+}
+
+#block-system-main-menu a {
+  color: #fff;
+}
+
+#block-system-main-menu ul li a {
+  line-height: 42px;
+  height: 42px;
+  display: block;
+  float: left;
+  padding: 0 15px;
+  font-size: 1em;
+  font-size: 1.5em;
+}
+
+#block-system-main-menu ul li a:hover,
+#block-system-main-menu ul li a.active {
+  background: #C4EB17;
+  color: #fff;
+  text-decoration: none;
+}
+
+#block-system-main-menu ul.menu li {
+  display: block;
+  padding: 0;
+  list-style: none;
+}
+
+
+
+
+
+
+/* Breadcrumb */
+#breadcrumb {
+  clear: both;
+  font-size: 12px;
+  padding: 10px 0;
+}
+
+
+/* block */
+
+.block h2 {
+  font-weight: normal;
+  color: #333;
+  padding: 0;
+  margin: 1em 0 0.5em;
+}
+
+
+
+.submitted {
+  font-size: 0.8em;
+}
+
+.node .content {
+  padding: 0 0 20px; 
+}
+
+.links {
+  font-size: 1em;
+}
+
+ul.links li {
+  padding: 0 0.8em 0 0;
+}
+
+.node h2 {
+  border-left: 32px solid #C4EB17;
+  padding-left: 10px;
+}
+
+.node h2 a:hover {
+  background: #1F836F;
+  color: #fff;
+  text-decoration: none;
+}
+
+body {
+  background-color: #DDDDDD;
+}

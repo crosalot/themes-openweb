@@ -1,0 +1,102 @@
+body {
+  background: #D3EDEE;
+  font-family: Verdana,Helvetica,Arial,sans-serif,"Lucida Grande";
+  color: #555;
+}
+
+a:link,
+a:visited {
+  color: #785047;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p a:link {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  color: #333;
+}
+
+h2 {
+  line-height: 1em;
+  margin: 0 0 0.2em;
+  padding-bottom: 0.5em;
+}
+
+div.submitted {
+  color: #898989;
+  font-size: 0.8333em;
+  line-height: 1.6em;
+}
+
+div.node {
+  margin-bottom: 20px;
+}
+
+#main-content {
+  background: URL(http://opendream.co.th/sites/all/themes/opendream/images/bg-bottom.gif) no-repeat right bottom #FFFBFD;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  padding: 10px;
+}
+
+.block-node-weight {
+  clear: both;
+}
+.node-weight-slide {
+  background: none;
+}
+
+#block-system-main-menu {
+  padding: 0 0 3em;
+}
+
+#block-system-main-menu,
+#block-system-main-menu .content {
+  float: right;
+}
+#block-system-main-menu ul.menu {
+  float: right;
+  padding: 15px 20px 0 0;
+  margin: 0;
+}
+#block-system-main-menu ul.menu li {
+  float: left;
+  list-style: none;
+  padding: 0;
+}
+#block-system-main-menu ul.menu li a {
+  color: #191716;
+  text-decoration: none;
+  margin: 0 0 0 15px;
+  padding: 2px 8px;
+  display: block;
+  font-size: 120%;
+}
+#block-system-main-menu ul.menu li a:hover,
+#block-system-main-menu ul.menu li a.active {
+  background: #FFF100;
+  padding: 2px 8px;
+}
+
+#sidebar_first .item-list ul {
+  padding: 0;
+}
+#sidebar_first .item-list ul li {
+  list-style: none;
+  padding: 5px 0;
+  border-top: 1px solid #CCC;
+  margin: 0;
+}
+
+input.form-text,
+textarea.form-textarea {
+  padding: 0.8em;
+}

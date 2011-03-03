@@ -1,0 +1,16 @@
+; $Id$
+name = Sim Ple
+description = This theme demonstrates Drupal's default HTML markup and CSS styles. To learn how to build your own theme and override Drupal's default code, see the <a href="http://drupal.org/theme-guide">Theming Guide</a>.
+package = Openweb
+version = VERSION
+core = 7.x
+engine = phptemplate
+stylesheets[all][] = css/default.css
+stylesheets[all][] = css/style.css
+stylesheets[all][] = css/color.css
+
+regions[header] = Header
+regions[highlight] = Highlighted
+regions[content] = Content
+regions[sidebar_first] = Sidebar first
+regions[footer] = Footer
